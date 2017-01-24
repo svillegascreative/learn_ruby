@@ -1,9 +1,6 @@
 require './test_helper'
 require 'simon_says'
 
-# By now we should be getting better at reading tests. We should able to see
-# what methods will need to be defined and what they need to return.
-
 class TestSimonSays < MiniTest::Test
   def test_echo_hello
     assert_equal "hello", echo("hello")
@@ -27,15 +24,6 @@ class TestSimonSays < MiniTest::Test
     assert_equal "hello hello", repeat("hello")
   end
 
-  # Wait a second! How can you make the "repeat" method
-  # take one *or* two arguments?
-  #
-  # def repeat(string, num = 2)
-  #   # your code here
-  # end
-  #
-  # The important part is num = 2. What happens is if a num isn't given,
-  # then num will fallback on 2, i.e. it has a default value of 2.
   def test_repeat_multiple_times
     assert_equal "hello hello hello", repeat("hello", 3)
   end
